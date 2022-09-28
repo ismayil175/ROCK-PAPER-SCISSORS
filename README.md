@@ -1,3 +1,3 @@
-# Guess-Game
-It`s a guessing game. The first part of this game is the computer picks a number and you try to guess. 
-And the second part is we give a number computer tries to guess our number.
+# ROCK PAPER SCISSORS
+Rock paper scissors is a hand game originating from China, usually played between two people, 
+in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock", "paper", and "scissors".
