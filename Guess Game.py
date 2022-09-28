@@ -1,40 +1,20 @@
-#Computer gives a number and we try to guess between given numbers
-# import random
-# from re import X
+import random
 
-# def guess(x): 
-#     random_number = random.randint(1, x)  
-#     guess = 0
-#     while guess != random_number:
-#         guess = int(input(f'Guess a number between 1 and {x}:'))
-#         if guess < random_number:
-#             print('Sorry, guess again. Too low.')
-#         elif guess > random_number:
-#             print('Sorry, guess again. Too high.')
-#     print(f'Yay,You`ve guessed the number {random_number}.')
-#guess(5)
+def play():
+    user = input("'r' for rock,'p' for paper,'s' for scissors:")
+    computer = random.choice(['r','p','s'])
 
-#We think a number and the computer try to our guess number
+    if user == computer:
+        return 'tie'
+    if is_win(user, computer):
+        return 'You Won!'
 
-# import random
+    return 'You Lost!'
 
-# def computer_guess(x):
-#     low = 1
-#     high = x 
-#     feedback = ''
-#     while feedback != 'c':
-#         guess = random.randint(low,high)
-#         feedback = input(f'Is {guess} too low (L) or too High(H) or Correct (C)'.lower())
-#         if feedback == 'h':
-#             high = guess -1 
-#         elif feedback == 'l':
-#             low = guess + 1
-#     print(f'The computer guessed your the number {guess}')
-
-# computer_guess(5)
-
-
-
-
-
+def is_win(player, opponent):
+    #return true if player wins
+    # r > s, s > p , p > r
+    if(player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') or (player == 'p' and opponent == 'r'):
+        return True
+print(play())
 
